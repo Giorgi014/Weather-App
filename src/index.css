@@ -19,3 +19,6 @@
   --rainy_night: linear-gradient(135deg, #0c0f12 0%, #1a2332 50%, #050d16 100%);
   --snowy_night: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #243447 100%);
 }
+body{
+  background: var(--moon_night);
+}
