@@ -5,10 +5,10 @@ import "./index.css";
 import App from "./App.jsx";
 
 const TodayWeather = React.lazy(() =>
-  import("./components/TodayWeather/TodayWeather.jsx")
+  import("./components/MainPage/TodayWeather/TodayWeather.jsx")
 );
 const ForecastWeather = React.lazy(() =>
-  import("./components/ForecastWeather/ForecastWeather.jsx")
+  import("./components/MainPage/ForecastWeather/ForecastWeather.jsx")
 );
 
 const router = createBrowserRouter([
