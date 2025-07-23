@@ -1,4 +1,4 @@
-import { Cloud, ModeBtn } from "../../Route/Route";
+import { Cloud, ModeBtn, Search } from "../../Route/Route";
 import "./Header.scss";
 
 const Header = () => {
@@ -11,6 +11,8 @@ const Header = () => {
         <img src={Cloud} alt="cloud icon" className="cloud_icon" />
         <h1>Weather Now</h1>
       </div>
+      <p>Your beautiful weather companion</p>
+      <Search />
     </header>
   );
 };

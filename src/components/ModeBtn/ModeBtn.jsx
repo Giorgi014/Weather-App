@@ -1,12 +1,28 @@
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "../Route/Route";
+import "./ModeBtn.scss";
 
 const ModeBtn = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true";
+  });
+
+  useEffect(() => {
+    document.body.classList.toggle("darkmode", darkMode);
+  }, [darkMode]);
+
+  const toggleMode = () => {
+    const light = !darkMode;
+    setDarkMode(light);
+    localStorage.setItem("darkMode", light);
+  };
+
   return (
-    <div class="color_mode mode">
-      <div class="handle_mode_cont" id="handle_cont">
-        <div class="mode_boolet">
-          <img src={Sun} alt="" class="sun" />
-          <img src={Moon} alt="" class="moon" />
+    <div className="color_mode mode" onClick={toggleMode}>
+      <div className="handle_mode_cont" id="handle_cont">
+        <div className="mode_boolet">
+          <img src={Sun} alt="" className="sun" />
+          <img src={Moon} alt="" className="moon" />
         </div>
       </div>
     </div>

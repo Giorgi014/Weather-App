@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "InterTight Bold";
+  src: url(./assets/font/Inter_Tight/static/InterTight-Bold.ttf) format("woff2");
+}
+@font-face {
+  font-family: "InterTight Medium";
+  src: url(./assets/font/Inter_Tight/static/InterTight-Medium.ttf)
+    format("woff2");
+}
+@font-face {
+  font-family: "InterTight Thin";
+  src: url(./assets/font/Inter_Tight/static/InterTight-Thin.ttf) format("woff2");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --lite_white: #ffffff6f;
+  --lite_white_bg: #ffffff1b;
+  --error_message: #d10000;
+  --btn_bg_lite: linear-gradient(
+    to right,
+    rgb(251, 146, 60),
+    rgb(250, 204, 21),
+    rgb(252, 211, 77)
+  );
+  --btn_bg_bark: linear-gradient(
+    to right,
+    rgb(79, 70, 229),
+    rgb(147, 51, 234),
+    rgb(37, 99, 235)
+  );
+  --sunny_day: linear-gradient(135deg, #74b9ff 0%, #0984e3 50%, #6c5ce7 100%);
+  --cloudy_day: linear-gradient(135deg, #2d3436 0%, #b0b0b3 50%, #000000 100%);
+  --rainy_day: linear-gradient(135deg, #374151 0%, #4b5563 50%, #111827 100%);
+  --snowy_day: linear-gradient(135deg, #a0a0a0 0%, #808080 50%, #606060 100%);
+  --moon_night: linear-gradient(135deg, #2d3436 0%, #6c5ce7 50%, #000000 100%);
+  --cloudy_night: linear-gradient(
+    135deg,
+    #303030 0%,
+    #1a1f2b 50%,
+    #020405 100%
+  );
+  --rainy_night: linear-gradient(135deg, #0c0f12 0%, #1a2332 50%, #050d16 100%);
+  --snowy_night: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #243447 100%);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 1px;
+  color: var(--white);
+  background: var(--sunny_day);
+  font-family: "InterTight Medium";
+  overflow: hidden;
+  &.darkmode {
+    background: var(--moon_night);
+  }
+}
