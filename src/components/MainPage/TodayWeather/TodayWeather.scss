@@ -81,4 +81,39 @@
       }
     }
   }
+  .weather_info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    width: 100%;
+    margin: 20px auto 40px auto;
+  }
+  .sunrise_sunset_container {
+    @include displayCenter(center, center);
+    width: 100%;
+    margin: 20px auto 40px auto;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #searched_city_container {
+    .weather_info {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 20px;
+      place-items: center;
+      //   > :nth-child(4) {
+      //     grid-column: 1 / 5;
+      //     justify-self: center;
+      //   }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  #searched_city_container {
+    .weather_info {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

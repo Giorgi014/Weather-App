@@ -1,9 +1,20 @@
-import React from 'react'
+import { clsx } from "clsx";
+import './Cart.scss';
 
-function Cart() {
+export const Cart = ({variant = "default", children, ...props}) => {
   return (
-    <div>Cart</div>
+    <div
+    {...props}
+    className={clsx(
+      "cart_container",
+      {
+        "today_weather_cart": variant === "today_cart",
+        "sunrise_sunset_cart":variant === "sunrise_sunset",
+        "forecas_weather_cart": variant === "forecast_cart"
+      }
+    )}
+    >
+      
+    </div>
   )
 }
-
-export default Cart

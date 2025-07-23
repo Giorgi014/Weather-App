@@ -4,10 +4,10 @@ import Header from"./components/MainPage/Header/Header.jsx";
 
 function App() {
   return (
-    <>
+    <div className="content_wrapper">
       <Header />
       <Outlet />
-    </>
+    </div>
   );
 }
 

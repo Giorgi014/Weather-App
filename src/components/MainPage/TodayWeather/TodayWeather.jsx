@@ -1,3 +1,4 @@
+import { Cart } from "../../Route/Route";
 import "./TodayWeather.scss";
 
 const TodayWeather = () => {
@@ -19,6 +20,17 @@ const TodayWeather = () => {
             <p id="temperature_info"></p>
           </div>
         </div>
+      </section>
+      <section className="weather_info">
+        <Cart variant="today_cart"></Cart>
+        <Cart variant="today_cart"></Cart>
+        <Cart variant="today_cart"></Cart>
+        <Cart variant="today_cart"></Cart>
+        <Cart variant="today_cart"></Cart>
+      </section>
+      <section className="sunrise_sunset_container">
+        <Cart variant="sunrise_sunset"></Cart>
+        <Cart variant="sunrise_sunset"></Cart>
       </section>
     </article>
   );

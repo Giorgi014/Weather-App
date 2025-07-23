@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "../Route/Route";
 import "./ModeBtn.scss";
 
-const ModeBtn = () => {
+export const ModeBtn = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
   });
@@ -28,5 +28,3 @@ const ModeBtn = () => {
     </div>
   );
 };
-
-export default ModeBtn;

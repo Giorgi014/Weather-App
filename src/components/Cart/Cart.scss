@@ -1,1 +1,76 @@
-// clear
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.today_weather_cart {
+  @include displayCenter(center, center);
+  flex-direction: column;
+  font-size: clamp(16px, 2vw, 20px);
+  background-color: var(--lite_white_bg);
+  width: clamp(120px, 17vw, 150px);
+  height: clamp(120px, 17vw, 150px);
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  img {
+    width: clamp(70px, 10vw, 90px);
+    height: clamp(70px, 10vw, 90px);
+  }
+  &:hover {
+    background-color: var(--lite_white);
+    transform: scale(1.05);
+  }
+}
+
+.sunrise_sunset_cart {
+  @include displayCenter(center, center);
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--lite_white_bg);
+  width: clamp(120px, 35vw, 200px);
+  height: clamp(120px, 17vw, 150px);
+  padding: 5px;
+  border-radius: 15px;
+  font-size: clamp(16px, 2vw, 18px);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  img {
+    width: clamp(70px, 10vw, 90px);
+    height: clamp(70px, 10vw, 90px);
+  }
+  &:hover {
+    background-color: var(--lite_white);
+    transform: scale(1.05);
+  }
+}
+
+.forecas_weather_cart {
+  @include displayCenter(space-between, center);
+  flex-direction: column;
+  gap: 10px;
+  width: clamp(120px, 15vw, 200px);
+  margin: 20px auto;
+  background-color: var(--lite_white_bg);
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "InterTight Bold";
+  font-size: clamp(16px, 2vw, 20px);
+  img {
+    width: clamp(50px, 7vw, 70px);
+    height: clamp(50px, 7vw, 70px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .forecas_weather_cart {
+    width: 100%;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

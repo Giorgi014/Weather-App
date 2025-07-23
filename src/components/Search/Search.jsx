@@ -1,6 +1,6 @@
 import "./Search.scss";
 
-const Search = () => {
+export const Search = () => {
   return (
     <div className="search_container">
       <input type="text" placeholder="Search for a city..." id="search" />
@@ -9,5 +9,3 @@ const Search = () => {
     </div>
   );
 };
-
-export default Search;
